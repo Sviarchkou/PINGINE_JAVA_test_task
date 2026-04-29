@@ -30,6 +30,9 @@ public class VehicleEntity {
     @Column(name = "vin", nullable = false, length = 32, unique = true)
     private String vin;
 
+    @Column(name = "mileage_km", nullable = false)
+    private double mileageKm;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "driver_id")
     private DriverEntity driver;
